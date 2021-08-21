@@ -4,7 +4,7 @@ services:
     image: infracloudio/csvserver:latest
     restart: always
     volumes:
-      - /home/ec2-user/gencsv.sh:/csvserver/gencsv.sh
+      - solution/gencsv.sh:/csvserver/gencsv.sh
     command: bash -c "./gencsv.sh && ./csvserver"
     environment:
       - CSVSERVER_BORDER=Orange
